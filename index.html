@@ -35,36 +35,53 @@ margin-right: 20px;
 margin-top: 20px;
 font-size: 16px;
 font-family: Noto Sans HK, sans-serif;
-font-weight: 400;
+font-weight: 600;
 display: grid;
 grid-template-columns: 1fr 1fr;
 }
-.banner-wrapper {
+  
+.smooth-marquee {
+  width: auto;
+  height: auto;
+  margin: auto;
   overflow: hidden;
-  white-space: nowrap;
-  background-color: #333F50;
-  border-bottom: 2px solid #C3A06F;
+  border-radius: 0px;
+  background-color: transparent;
+  border: 0px solid rgba(0,0,0,0.0); 
+  display: flex;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(4px); 
 }
 
-.banner-marquee {
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-linear 12s linear infinite;
+  animation-play-state: running; /* 預設為啟動狀態 */
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;  /* 滑鼠移上去就暫停動畫 */
+}
+
+.marquee-track span {
   display: inline-block;
-  padding-left: 100%;
-  font-size: max(36px, 5vw);  /* 避免太小又避免太大 */
-  font-family: Noto Sans HK, sans-serif;
-  font-weight: 800;
-  color: #C3A06F;
-  animation: marquee-scroll 20s linear infinite;
+  padding-right: 2rem; /* 控制字距，不會太緊 */
+  font-size: 8rem;
   white-space: nowrap;
+  line-height: 1;
+  font-family: Noto Sans HK, sans-serif;
+  color: #C4A16F;
+  line-height: 2;
+  font-weight: 900;
 }
 
-@keyframes marquee-scroll {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+/* 動畫讓文字滾動 */
+@keyframes scroll-linear {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
-@media screen and (max-width: 768px) {
-  .banner-marquee {
-    transform: scale(0.8);
-  }
 }
 .footer {
   background-color: #eee;
@@ -99,10 +116,12 @@ background-image: ;}
 </head>
 <body>
 
-<div class="banner-marquee">
-  <span>外傘頂洲共和國｜Republic of Caisancho｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+  </div>
 </div>
-
+  
 <div class='homepage-title'><div style='text-align: left;'>外傘頂洲</div><div style='text-align: right;'>共和國</div></div><div class='nav-bar'><div> </div><div>關於&#183;法規&#183;其他</div></div><div class='homepage-content'><div style='text-align: left; padding-right: 30%;'><p>歡迎來到&#65292;外傘頂洲共和國</p><p>*framework testing</p></div><div class='index-content-innerbox' style='height: 500px;   overflow: scroll; text-align: left;'><p>外傘頂洲&#65292;又稱外傘頂沙洲&#12289;外傘頂汕&#65292;在一些地圖中則以舊時外傘頂洲的日語對音Gaisancho或Caisancho標示&#65292;是台灣沿海最大的沙洲&#65292;現存面積約1,000餘公頃&#65292;因形狀似傘得名&#12290;行政劃分上屬臺灣雲林縣口湖鄉&#65292;不過如今絕大部份位於臺灣嘉義縣東石鄉外海約10餘公里處&#65292;主要由濁水溪的泥沙沖積而成&#65292;是雲嘉南濱海國家風景區的景點之一[1]&#12290;近年來由於河川興建攔砂壩&#65292;導致沙源減少而逐漸縮小&#65292;嘉義沿海也因此逐漸失去屏障&#12290;洲上現已無常住人口[2]&#65292;上面的塭港堆燈塔是該沙洲唯一的燈塔&#12290;經常和&#12300;海豐島&#12301;混淆[3]&#12290;</p><p>外傘頂洲自然造陸運動形成於日治前不久&#65292;1901年台灣總督府發行由禮密臣編輯&#65292;日人T. Obanawa描繪的福爾摩沙圖&#65292;在東石鄉西側外海己出現三個小圓圈&#65292;位置明顯在北港溪出海口之南&#65292;這是今日外傘頂汕之原型&#65292;在地理上應屬嘉義縣&#12290;原位於台灣雲林縣臺西鄉外海&#65292;在20世紀初才開始受地方政府注意&#12290;1914年日治時代&#65292;日本人在此首次設立燈塔[4]&#12290;惟沙洲地基不穩&#65292;六年後即倒塌&#12290;不論在日治&#12289;戰後初期&#12289;1988年等時期&#65292;其管轄政府都曾實施植林固沙的計劃&#65292;但均告失敗&#65292;仍無法阻止漂沙移動&#12290;在1984年資料中&#65292;退潮時外傘頂洲面積約1,000餘公頃&#65292;漲潮時約200餘公頃&#65292;南北長10餘公里&#65292;此後不斷縮小[5]&#12290;
 </p><p>
 據曾任塭港堆燈塔守望員近40年的蔡福裕描述&#65292;1960年代&#65292;外傘頂洲曾住居逾千人&#65292;用茅草&#12289;竹子搭建的上百戶簡易房舍自成聚落&#65292;連雜貨店&#12289;藥鋪俱全&#65292;居民普遍仰賴捕魚&#12289;養蚵維生&#65292;自給自足&#65292;人丁興盛的景象&#65292;就像座與世隔絕的海上島國&#12290;強勁的風飛沙造出一座座約2&#12289;3層樓高的小山尚能蓄水&#65307;從層層交錯的山谷底部隨手挖掘&#65292;沁涼甘甜的淡水立刻湧出&#12290;20多年後&#65292;洲上堆疊成峰的沙丘&#65292;經數次颱風侵襲&#65292;與沙洲流失&#12289;漂移作用&#65292;逐漸夷成平地&#65292;居民到處挖掘也找不到淡水飲用&#65292;只有陸續遷離&#12290;
