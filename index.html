@@ -2,21 +2,6 @@
 <style>
 /* Index Titles */
 
-
-.homepage-title{
-box-sizing: border-box;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: 20px;
-margin-right: 20px;
-font-size: 11.5vw;
-font-family: Noto Sans HK, sans-serif;
-color: #C4A16F;
-font-weight: 800;
-display: grid;
-grid-template-columns: 1fr 1fr;
-}
-
 .nav-bar{
 margin-top: 1vw;
 grid-template-columns: 1fr 1fr;
@@ -57,7 +42,7 @@ grid-template-columns: 1fr 1fr;
 .marquee-track {
   display: flex;
   white-space: nowrap;
-  animation: scroll-linear 12s linear infinite;
+  animation: scroll-linear 20s linear infinite;
   animation-play-state: running; /* 預設為啟動狀態 */
 }
 
@@ -68,7 +53,7 @@ grid-template-columns: 1fr 1fr;
 .marquee-track span {
   display: inline-block;
   padding-right: 2rem; /* 控制字距，不會太緊 */
-  font-size: 8rem;
+  font-size: 11.5vw;
   white-space: nowrap;
   line-height: 1;
   font-family: Noto Sans HK, sans-serif;
@@ -81,18 +66,40 @@ grid-template-columns: 1fr 1fr;
 @keyframes scroll-linear {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-
 }
-.footer {
-  background-color: #eee;
-  color: #333F50;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
+.caisancho-footer {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #555;
 }
 
+.footer-flag {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #999;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #C3A06F;
+}
 
 .index-content-innerbox { scrollbar-width: none; } /* Firefox */
 .index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
@@ -104,7 +111,6 @@ body {
 background-color: rgba(255,255,255,0.7);
     background-blend-mode: lighten;
   background-size: auto;
-}
 }
 
 .index-page{
@@ -122,10 +128,6 @@ background-image: ;}
   </div>
 </div>
   
-<div class='homepage-title'>
- <div style='text-align: left;'>外傘頂洲</div>
- <div style='text-align: right;'>共和國</div>
-</div>
   <div class='nav-bar'>
     <div> </div>
     <div>關於&#183;法規&#183;其他</div>
@@ -137,28 +139,22 @@ background-image: ;}
 據曾任塭港堆燈塔守望員近40年的蔡福裕描述&#65292;1960年代&#65292;外傘頂洲曾住居逾千人&#65292;用茅草&#12289;竹子搭建的上百戶簡易房舍自成聚落&#65292;連雜貨店&#12289;藥鋪俱全&#65292;居民普遍仰賴捕魚&#12289;養蚵維生&#65292;自給自足&#65292;人丁興盛的景象&#65292;就像座與世隔絕的海上島國&#12290;強勁的風飛沙造出一座座約2&#12289;3層樓高的小山尚能蓄水&#65307;從層層交錯的山谷底部隨手挖掘&#65292;沁涼甘甜的淡水立刻湧出&#12290;20多年後&#65292;洲上堆疊成峰的沙丘&#65292;經數次颱風侵襲&#65292;與沙洲流失&#12289;漂移作用&#65292;逐漸夷成平地&#65292;居民到處挖掘也找不到淡水飲用&#65292;只有陸續遷離&#12290;
 </p><p>
 2020年4月&#65292;海洋委員會邀集內政部&#12289;經濟部&#12289;交通部&#12289;農委會及雲嘉地方政府等&#65292;召開&#12300;外傘頂洲侵蝕防治應急保護措施&#12301;研商會議&#65292;決定採取設置沙袋方式&#65292;加高臨沙洲海側高度&#65292;防止波浪侵蝕&#65307;另規劃在外傘頂洲南端向海側設置突堤&#65292;並配合養灘及人工岬頭等方式&#65292;防護外傘頂洲&#12290;交通部與經濟部在雲嘉沿海海域或港區清淤作業所產生的土方&#65292;將作為外傘頂洲養灘沙源&#12290;[6]</p></div></div>
-  <footer class="footer">
-    <div><img src="images/footerflag.png" style="height:60px;"></div>
-    <div style='text-align: left;'>
-      <strong>其他連結</strong><br>
-      MicroWiki<br>
-      Facebook<br>
-      Threads
-    </div>
-    <div style='text-align: right;'>
-      <strong>外傘頂洲州公所</strong><br>
-      請勿將本國與歪七扭八政府相提並論。
-    </div>
-    <div style="width: 100%; text-align: center; font-size: 0.8rem; margin-top: 1rem;">
-      Copyright © 1624 - 2025 Caisancho.Gov
-    </div>
-  </footer>
 
 <div class="smooth-marquee">
   <div class="marquee-track">
     <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
   </div>
 </div>
+
+<footer class="caisancho-footer">
+  <img src="images/footerflag.png" class="footer-flag">
+  <p class="copyright">Copyright © 2025 Gôa-Sòaⁿ-Téng-Chiu kióng-hô-kok</p>
+  <div class="footer-links">
+    <a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a> |
+    <a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a> |
+    <a href="https://www.threads.com/@caisancho">THREADS 串串</a>
+  </div>
+</footer>
   
 </body>
 </html>
