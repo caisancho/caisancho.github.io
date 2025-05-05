@@ -3,12 +3,12 @@
 /* Index Titles */
 
 .nav-bar{
-margin-top: 1vw;
-grid-template-columns: 1fr 1fr;
-display: grid;
-font-size: 2.5vw;
-font-family: Noto Sans TC, sans-serif;
-font-weight: 400;
+  margin-top: 1vw;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  font-size: 1.5vw;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 400;
 }
 
 .nav-bar a {
@@ -22,18 +22,74 @@ font-weight: 400;
 }
 
 .homepage-content{
-box-sizing: border-box;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: 20px;
-margin-right: 20px;
-margin-top: 20px;
-font-size: 16px;
-font-family: Noto Sans TC, sans-serif;
-font-weight: 300;
-display: grid;
-grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+
+.flag {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+
+.angled-marquee {
+  background-color: #C3A06F;
+  transform: rotate(-5deg);
+  width: 60%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 2rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.angled-marquee-track {
+  display: flex;
+  will-change: transform;
+  font-family: Noto Sans TC, sans-serif;
+}
+.angled-marquee-track a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.angled-marquee-track a:hover {
+  color: #906B3E;
+}
+
+.angled-marquee-item {
+  flex-shrink: 0;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  white-space: nowrap;
+}
+
+ .angled-box {
+  border: 1px solid #C3A06F;
+  transform: rotate(2deg);
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  font-size: 1rem;
+  font-family: Noto Sans TC, sans-serif;
+  color: #222;
+  line-height: 1.8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
   
 .smooth-marquee {
   width: auto;
@@ -52,7 +108,7 @@ grid-template-columns: 1fr 1fr;
 .marquee-track {
   display: flex;
   white-space: nowrap;
-  animation: scroll-linear 20s linear infinite;
+  animation: scroll-linear 60s linear infinite;
   animation-play-state: running; /* 預設為啟動狀態 */
 }
 
@@ -61,10 +117,9 @@ grid-template-columns: 1fr 1fr;
   padding-right: 2rem; /* 控制字距，不會太緊 */
   font-size: 11.5vw;
   white-space: nowrap;
-  line-height: 1;
   font-family: Noto Sans TC, sans-serif;
   color: #C4A16F;
-  line-height: 2;
+  line-height: 1.4;
   font-weight: 900;
 }
 .smooth-marquee,
@@ -138,32 +193,89 @@ background-image: ;}
     <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
   </div>
 </div>
-  
-  <div class='nav-bar'>
-    <div> </div>
-    <div>
-      <a href="index.html">首頁</a> ．
-      <font color="#C4A16F">關於</font> ．
-      <a href="law.html">法規</a> ．
-      <a href="others.html">其他</a>
-      </div>
-  </div>
-  <div class='homepage-content'>
-    <div style='text-align: left; padding-right: 30%;'><p>歡迎來到&#65292;外傘頂洲共和國</p>
-      <p>
-        你可以不太正式的視這裡為一個與西蘭公國、前玫瑰島共和國一樣的微國家（Micronation）或某幾塊黑水溝上的沙洲，自獨立後至今這裡皆處於流亡狀態， 請特別留意，本站雖依照上述微國家精神設立，但非正式法人組織，請勿將外傘頂洲政府與其他歪七扭八的「政府」相互類比。
 
-        這裡沒有甚麼自古以來，聯合國2758號決議不關我們的事，外傘頂洲從來不是中國的一部分。</p>
-    </div>
-    <div class='index-content-innerbox' style='height: 500px;   overflow: scroll; text-align: left;'><p>外傘頂洲&#65292;又稱外傘頂沙洲&#12289;外傘頂汕&#65292;在一些地圖中則以舊時外傘頂洲的日語對音Gaisancho或Caisancho標示&#65292;是台灣沿海最大的沙洲&#65292;現存面積約1,000餘公頃&#65292;因形狀似傘得名&#12290;行政劃分上屬臺灣雲林縣口湖鄉&#65292;不過如今絕大部份位於臺灣嘉義縣東石鄉外海約10餘公里處&#65292;主要由濁水溪的泥沙沖積而成&#65292;是雲嘉南濱海國家風景區的景點之一[1]&#12290;近年來由於河川興建攔砂壩&#65292;導致沙源減少而逐漸縮小&#65292;嘉義沿海也因此逐漸失去屏障&#12290;洲上現已無常住人口[2]&#65292;上面的塭港堆燈塔是該沙洲唯一的燈塔&#12290;經常和&#12300;海豐島&#12301;混淆[3]&#12290;</p><p>外傘頂洲自然造陸運動形成於日治前不久&#65292;1901年台灣總督府發行由禮密臣編輯&#65292;日人T. Obanawa描繪的福爾摩沙圖&#65292;在東石鄉西側外海己出現三個小圓圈&#65292;位置明顯在北港溪出海口之南&#65292;這是今日外傘頂汕之原型&#65292;在地理上應屬嘉義縣&#12290;原位於台灣雲林縣臺西鄉外海&#65292;在20世紀初才開始受地方政府注意&#12290;1914年日治時代&#65292;日本人在此首次設立燈塔[4]&#12290;惟沙洲地基不穩&#65292;六年後即倒塌&#12290;不論在日治&#12289;戰後初期&#12289;1988年等時期&#65292;其管轄政府都曾實施植林固沙的計劃&#65292;但均告失敗&#65292;仍無法阻止漂沙移動&#12290;在1984年資料中&#65292;退潮時外傘頂洲面積約1,000餘公頃&#65292;漲潮時約200餘公頃&#65292;南北長10餘公里&#65292;此後不斷縮小[5]&#12290;
-</p><p>
-據曾任塭港堆燈塔守望員近40年的蔡福裕描述&#65292;1960年代&#65292;外傘頂洲曾住居逾千人&#65292;用茅草&#12289;竹子搭建的上百戶簡易房舍自成聚落&#65292;連雜貨店&#12289;藥鋪俱全&#65292;居民普遍仰賴捕魚&#12289;養蚵維生&#65292;自給自足&#65292;人丁興盛的景象&#65292;就像座與世隔絕的海上島國&#12290;強勁的風飛沙造出一座座約2&#12289;3層樓高的小山尚能蓄水&#65307;從層層交錯的山谷底部隨手挖掘&#65292;沁涼甘甜的淡水立刻湧出&#12290;20多年後&#65292;洲上堆疊成峰的沙丘&#65292;經數次颱風侵襲&#65292;與沙洲流失&#12289;漂移作用&#65292;逐漸夷成平地&#65292;居民到處挖掘也找不到淡水飲用&#65292;只有陸續遷離&#12290;
-</p><p>
-2020年4月&#65292;海洋委員會邀集內政部&#12289;經濟部&#12289;交通部&#12289;農委會及雲嘉地方政府等&#65292;召開&#12300;外傘頂洲侵蝕防治應急保護措施&#12301;研商會議&#65292;決定採取設置沙袋方式&#65292;加高臨沙洲海側高度&#65292;防止波浪侵蝕&#65307;另規劃在外傘頂洲南端向海側設置突堤&#65292;並配合養灘及人工岬頭等方式&#65292;防護外傘頂洲&#12290;交通部與經濟部在雲嘉沿海海域或港區清淤作業所產生的土方&#65292;將作為外傘頂洲養灘沙源&#12290;[6]</p></div></div>
+  <div class="angled-marquee" id="marquee">
+  <div class="angled-marquee-track" id="track">
+    <!-- 重複內容 3~4 次 -->
+    <div class="angled-marquee-item"><a href="index.html">HOME 首頁</a></div>
+    <div class="angled-marquee-item"><a href="law.html">LAW 法規</a></div>
+    <div class="angled-marquee-item"><a href="others.html">OTHERS 其他</div>
+    <div class="angled-marquee-item"><a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a></div>
+    <div class="angled-marquee-item"><a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a></div>
+    <div class="angled-marquee-item"><a href="https://www.threads.com/@caisancho">THREADS 串串</a></div>
+  </div>
+</div>
+
+<div class="angled-box">
+  <p>
+<font color="#C3A06F" size="5"><b>關於</b></font> <font size="5">「外傘頂洲共和國」</font><br>
+外傘頂洲共和國（白話字：<font color="#C3A06F">Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok</font>／英文：<font color="#C3A06F">Republic of Caisancho</font>／日文：<font color="#C3A06F">ガイサンチョ共和国</font> ／ 世界語：<font color="#C3A06F">Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo</font>），領土由外傘頂洲、箔子寮汕與統汕州組成。臺灣西南海域的沖積沙洲最早可以記錄到近世（early modern period）由西方航海家所繪製的海圖中，與隔壁島嶼（即臺灣島） 類似，外傘頂洲也歷經了新舊帝國主義的殖民，最終在2021年3月3日宣布獨立。
+
+    <br>
+<font size="4"><b>政治</b></font> <br>
+外傘頂洲由流亡政府、參議會與法院組成三權分立的政府架構，不過礙於現實所致，目前實際執行上以共和國政府為主體，立法權與司法權因形勢凍結。對外關係上設有主則對臺事務的「外傘頂洲共和國駐臺灣辦事處」與對中事務的「國務院外傘頂洲事務關你屁室」。
+
+    <br>
+<font size="4"><b>旗幟與紋章</b></font> <br>
+外傘頂洲的「藍底夕洲旗」以象徵黑水溝的藍黑色與白色雲層上下分層，鑲上黃褐色的夕日與沙洲，排列方式正是致敬1950年代在日本東京成立的「臺灣共和國臨時政府」所使用的藍底日月旗。
+
+    <br>
+    <img src="images/flag.png" class="flag" title="國旗"><img src="images/armyflag.png" class="flag" title="陸軍旗"><img src="images/navyflag.png" class="flag" title="海軍旗"><img src="images/postalflag.png" class="flag" title="郵政旗">
+
+    <br>
+以此為基礎，另有海軍、陸軍與郵政旗。
+  </p>
+</div>
+
+<script>
+  const track = document.getElementById("track");
+  let isDown = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let velocity = 0;
+  let animationFrame;
+
+  function animate() {
+    currentTranslate += velocity;
+    velocity *= 0.95; // 慣性衰減
+
+    // 無限滾動檢查
+    const trackWidth = track.scrollWidth / 2;
+    if (currentTranslate < -trackWidth) currentTranslate += trackWidth;
+    if (currentTranslate > 0) currentTranslate -= trackWidth;
+
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  document.getElementById("marquee").addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    cancelAnimationFrame(animationFrame);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+    animationFrame = requestAnimationFrame(animate);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    velocity = dx;
+    currentTranslate += dx;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    startX = e.pageX;
+  });
+
+// 初始化
+track.innerHTML += track.innerHTML; // 複製內容做無限滾動
+animationFrame = requestAnimationFrame(animate);
+</script>
 
 <div class="smooth-marquee">
   <div class="marquee-track">
-    <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+    <span>ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜</span>
   </div>
 </div>
 
