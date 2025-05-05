@@ -35,11 +35,30 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.flag {
-  height: 48px;
-  margin-bottom: 1rem;
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem; 
 }
 
+.image-item {
+  flex: 1 1 calc(25% - 1rem); 
+  text-align: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
 
 .angled-marquee {
   background-color: #C3A06F;
@@ -109,12 +128,12 @@
   display: flex;
   white-space: nowrap;
   animation: scroll-linear 60s linear infinite;
-  animation-play-state: running; /* 預設為啟動狀態 */
+  animation-play-state: running; 
 }
 
 .marquee-track span {
   display: inline-block;
-  padding-right: 2rem; /* 控制字距，不會太緊 */
+  padding-right: 2rem; 
   font-size: 11.5vw;
   white-space: nowrap;
   font-family: Noto Sans TC, sans-serif;
@@ -128,7 +147,6 @@
   user-select: none;
 }
 
-/* 動畫讓文字滾動 */
 @keyframes scroll-linear {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -167,8 +185,8 @@
   color: #C3A06F;
 }
 
-.index-content-innerbox { scrollbar-width: none; } /* Firefox */
-.index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
+.index-content-innerbox { scrollbar-width: none; } 
+.index-content-innerbox { -ms-overflow-style: none; } 
 .index-content-innerbox::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
 
 
@@ -218,10 +236,25 @@ background-image: ;}
     <br>
 <font size="4"><b>旗幟與紋章</b></font> <br>
 外傘頂洲的「藍底夕洲旗」以象徵黑水溝的藍黑色與白色雲層上下分層，鑲上黃褐色的夕日與沙洲，排列方式正是致敬1950年代在日本東京成立的「臺灣共和國臨時政府」所使用的藍底日月旗。
-
-    <br>
-    <img src="images/flag.png" class="flag" title="國旗"><img src="images/armyflag.png" class="flag" title="陸軍旗"><img src="images/navyflag.png" class="flag" title="海軍旗"><img src="images/postalflag.png" class="flag" title="郵政旗">
-
+<br>
+  <div class="image-grid">
+  <div class="image-item">
+    <img src="images/flag.png" class="flag" title="國旗">
+    <p class="caption">國旗</p>
+  </div>
+  <div class="image-item">
+    <img src="images/armyflag.png" class="flag" title="陸軍旗">
+    <p class="caption">陸軍旗</p>
+  </div>
+  <div class="image-item">
+    <img src="images/navyflag.png" class="flag" title="海軍旗">
+    <p class="caption">海軍旗</p>
+  </div>
+  <div class="image-item">
+    <img src="images/postalflag.png" class="flag" title="郵政旗">
+    <p class="caption">郵政旗</p>
+  </div>
+</div>
     <br>
 以此為基礎，另有海軍、陸軍與郵政旗。
   </p>
