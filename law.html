@@ -1,1 +1,429 @@
+<!DOCTYPE html>
+<style>
+/* Index Titles */
 
+.nav-bar{
+  margin-top: 1vw;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  font-size: 1.5vw;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 400;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #999;
+  margin: 0 0.0rem;
+}
+
+.nav-bar a:hover {
+  color: #C3A06F;
+}
+
+.homepage-content{
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem; 
+}
+
+.image-item {
+  flex: 1 1 calc(25% - 1rem); 
+  text-align: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.angled-marquee {
+  background-color: #C3A06F;
+  transform: rotate(4deg);
+  width: 60%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 2rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.angled-marquee-track {
+  display: flex;
+  will-change: transform;
+  font-family: Noto Sans TC, sans-serif;
+}
+.angled-marquee-track a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.angled-marquee-track a:hover {
+  color: #906B3E;
+}
+
+.angled-marquee-item {
+  flex-shrink: 0;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  white-space: nowrap;
+}
+
+ .angled-box {
+  border: 1px solid #C3A06F;
+  transform: rotate(-3deg);
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  font-size: 1rem;
+  font-family: Noto Sans TC, sans-serif;
+  color: #222;
+  line-height: 1.8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+.law-content {
+  transform: rotate(2deg);
+  width: 75%;
+  margin: 0rem auto;
+  padding: 0rem;
+  background: #fff;
+  border: 0px solid #C3A06F;
+  line-height: 1.8;
+  color: #222;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  display: none;
+}
+
+.law-title {
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+  color: #C3A06F;
+  padding: 0rem;
+  margin: 0rem auto;
+  width: fit-content;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  user-select: none;
+}
+  
+.smooth-marquee {
+  width: auto;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0px;
+  background-color: transparent;
+  border: 0px solid rgba(0,0,0,0.0); 
+  display: flex;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(4px); 
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-linear 60s linear infinite;
+  animation-play-state: running; 
+}
+
+.marquee-track span {
+  display: inline-block;
+  padding-right: 2rem; 
+  font-size: 11.5vw;
+  white-space: nowrap;
+  font-family: Noto Sans TC, sans-serif;
+  color: #C4A16F;
+  line-height: 1.4;
+  font-weight: 900;
+}
+.smooth-marquee,
+.marquee-track,
+.marquee-track span {
+  user-select: none;
+}
+
+@keyframes scroll-linear {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.caisancho-footer {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #555;
+}
+
+.footer-flag {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #999;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #C3A06F;
+}
+
+.index-content-innerbox { scrollbar-width: none; } 
+.index-content-innerbox { -ms-overflow-style: none; } 
+.index-content-innerbox::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
+
+
+body {
+  background-image:url(" https://github.com/caisancho/caisancho.github.io/blob/main/caisancho_flag_waving.webm");
+background-color: rgba(255,255,255,0.7);
+    background-blend-mode: lighten;
+  background-size: auto;
+}
+
+.index-page{
+background-image: ;}
+
+</style>
+<html>
+<head>
+</head>
+<body>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+  </div>
+</div>
+
+  <div class="angled-marquee" id="marquee">
+  <div class="angled-marquee-track" id="track">
+    <!-- 重複內容 3~4 次 -->
+    <div class="angled-marquee-item"><a href="index.html">HOME 首頁</a></div>
+    <div class="angled-marquee-item"><a href="about.html">ABOUT 關於</a></div>
+    <div class="angled-marquee-item"><a href="others.html">OTHERS 其他</div>
+    <div class="angled-marquee-item"><a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a></div>
+    <div class="angled-marquee-item"><a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a></div>
+    <div class="angled-marquee-item"><a href="https://www.threads.com/@caisancho">THREADS 串串</a></div>
+  </div>
+</div>
+
+<div class="angled-box">
+  <p>
+<div class="law-section">
+  <h3 class="law-title">《外傘頂洲共和國憲章》</h3>
+  <div class="angled-box law-content">
+    <p>
+為了承認彼此的發言權、沉默權與保障諸多普世價值，<br>
+為了不再被任何國家或非國家之單位代表、誤植、代言、干涉或列管，<br>
+為了建立一個無需疆界也能稱國、有點制度但不太正經的想像共同體，<br>
+為了讓未來世代仍能在浮動沙土之上隨時放空、偶爾思考、經常呼吸，<br>
+在海線邊緣、Google Map誤判之處、即將消逝之地建立不可淹沒之意志，<br>
+故作莊嚴的宣告外傘頂洲獨立。<br>
+為尊重差異，維護無序，<br>
+讓一切正式而鬆散，自由而帶沙，訂定此共和國憲章。<br>
+      
+<font size="4"><b>第一章　國體與國號</b></font><br>
+
+一、本國定名為外傘頂洲共和國，其疆域依沙量與潮汐為浮動標準。<br>
+
+二、共和國立基於沙、風、傘落的蚵棚與不可名狀之國民意志。凡認同者，不論有無身份證、呼吸頻率、原生國籍，皆可宣稱為共和國國民。<br>
+
+三、共和國為自願、直接民主之主權單位，如潮間帶的沙一般介於國與非國之間、制度與想像之間、真誠與荒謬之間，其主權不因國際承認而有所浮動。<br>
+
+<font size="4"><b>第二章　國民權利</b></font><br>
+
+四、凡自行承認為本國國民，並經共和國政府核發身分文書者，即得為國民。國民身份不得在未經本人同意之下被剝奪。國民得擁多重國籍，亦得隨時退出、隨時回來。<br>
+
+五、共和國國民無論是否認真參與、是否明白本條文存在，均享有以下基本權利，除本人親自放棄或無視外，均不得剝奪：<br>
+<font size="1" color: #a1a1a1>
+1.	公開發表不構成實質意見之言論，並享有被認真聆聽與適度忽略之自由。<br>
+2.	集會、討論、耍廢、點名、失焦之自由，且不得被任何單位以「沒有申請」為由驅離。<br>
+3.	對一切被標示為「官方」、「重要」、「誠摯邀請」等之訊息，選擇不讀不回、已讀不回、或已讀亂回之自由。<br>
+4.	於任何時刻退出討論、當機、沉默、離線或暫停參與並應被視為一種正當立場之自由。<br>
+5.	在低薪、無房、打零工、週休七天之狀態下生存，並不因此失去尊嚴之權利。<br>
+6.	自我定義、否定原鄉、創造認同，重組、轉換、甚至放棄族群與文化標籤之自由。<br>
+7.	選擇是否被納入任何統計、民調、族群報告或KPI報表之自由。<br>
+8.	主張臺灣、香港、西藏等獨立與中華民國死透之自由。<br>
+</font>
+      
+六、國民雖無被動服從義務，但基於愛與包容，以下幾點可斟酌參考：<br>
+<font size="1" color: #a1a1a1>
+1.	參與無人發起之計畫，或協助沒人接續之討論。<br>
+2.	若不清楚狀況，請先旁觀三分鐘；若觀察無果可酌量發問。<br>
+3.	若有：「這個國家是真的嗎？」的提問應以微笑、沉默或「你覺得呢？」回應之。<br>
+4.	積極對抗任何企圖將垃圾丟向沙灘、社群、記憶與未來的陰謀。<br>
+</font>
+<font size="4" ><b>第三章　政府制度</b></font><br>
+
+七、共和國政府為一可能象徵性之行政機關，具若干儀式性與社會潛伏功能，主要功能職責如下： <br>
+<font size="1" color: #a1a1a1>
+1.	裝模作樣發表聲明，並保持語氣誠懇、版型美觀。<br>
+2.	統一印刷物格式，並避免使用新細明體。<br>
+3.	在各大街頭社運現場潛伏，視情況貼布條、發傳單或遞非旺旺牌仙貝。<br>
+4.	關注外傘頂洲沙源流失問題，於必要時以科普與文告應對。<br>
+5.	不定期召開冷清的記者會，對國際社會發出語焉不詳之立場聲明。<br>
+</font>
+共和國政府不得行使暴力、不得擁有預算、不得以「國安」為由封人嘴巴，亦不得自稱合法性高於群眾拍手共識。<br>
+
+八、參議會為本國最高協商、立法機構，其組成流動、其職責模糊，採「誰在場誰決定」原則。會議以鼓掌數、點頭頻率為表決依據。<br>
+
+九、 一切決議須同時符合下列三項標準，始得生「暫時有用的憲政效果」 ： <br>
+<font size="1" color: #a1a1a1>
+1.	兩人以上認真看待。<br>
+2.	三人以上覺得不錯。<br>
+3.	四人以上沒反對聲音。<br>
+</font>
+
+<font size="4"><b>第四章　對外關係</b></font><br>
+
+十、共和國不承認任何國際秩序、聯合國決議或強權之絕對正當性。與任何國家均得維持若即若離、忽冷忽熱、互相發瘋的友好關係。<br>
+
+十一、凡他國主動表示善意、發表相關言論或以對等關係贈與物資，即視為實質邦交國。本國亦保留單方面承認政治實體、次文化組織與實驗性社群之形式。<br>
+
+十二、共和國得與任何單位簽訂條約，條約格式包含但不限於貼紙、DM、筆記、口頭約定、BBS簽名檔或限時動態，唯內容不得包含「永久」、「永不」等字樣。條約之效力以約定或出席者記得多久為限，若無人記得則視為無效。<br>
+
+<font size="4"><b>第五章　最終條款</b></font><br>
+
+十三、本憲章得由任一國民提案，經參議會中途鼓掌三次以上即視為有效通過。修憲過程得以貼紙、紙條、拍照上傳等方式傳閱確認，經最後由簽名、圖章、鞋印、手印、象徵性塗鴉等方式完成簽署。<br>
+
+十四、凡條文實際上無人理會、窒礙難行、或經參議會審定已失其意義者，得即日作廢。<br>
+
+十五、凡本憲章未明定之事項，不得因未列舉而主張禁止，亦不得因列舉不全而踰越超譯。<br>
+
+    </p>
+  </div>
+</div>
+  <div class="law-section">
+  <h3 class="law-title">《賤民解放區原則》</h3>
+  <div class="angled-box law-content">
+    <p>
+一、講話與聆聽不輕易排除他人，積極接觸彼此。<br>
+二、反對精英領導，行動由參與式的彼此討論激盪而決定。<br>
+三、自主參與，不接受盲目指令。<br>
+四、不代替他人發言。<br>
+五、有任何疑問，坐下來面談。<br>
+六、所有共同決議在賤民解放區決定。<br>
+   </p>
+ </div>
+</div>
+
+</div>
+  
+<script>
+  const track = document.getElementById("track");
+  let isDown = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let velocity = 0;
+  let animationFrame;
+
+  function animate() {
+    currentTranslate += velocity;
+    velocity *= 0.95; // 慣性衰減
+
+    // 無限滾動檢查
+    const trackWidth = track.scrollWidth / 2;
+    if (currentTranslate < -trackWidth) currentTranslate += trackWidth;
+    if (currentTranslate > 0) currentTranslate -= trackWidth;
+
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  document.getElementById("marquee").addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    cancelAnimationFrame(animationFrame);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+    animationFrame = requestAnimationFrame(animate);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    velocity = dx;
+    currentTranslate += dx;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    startX = e.pageX;
+  });
+
+  document.querySelectorAll('.law-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const content = title.nextElementSibling;
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  });
+ });
+
+// 初始化
+track.innerHTML += track.innerHTML; // 複製內容做無限滾動
+animationFrame = requestAnimationFrame(animate);
+</script>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜</span>
+  </div>
+</div>
+
+<footer class="caisancho-footer">
+  <img src="images/footerflag.png" class="footer-flag">
+  <p class="copyright">Copyright © 2025 Gôa-Sòaⁿ-Téng-Chiu kióng-hô-kok</p>
+  <div class="footer-links">
+    <a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a> |
+    <a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a> |
+    <a href="https://www.threads.com/@caisancho">THREADS 串串</a>
+  </div>
+</footer>
+  
+</body>
+</html>
