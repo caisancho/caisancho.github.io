@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<style>
+/* Index Titles */
 
+.nav-bar{
+  margin-top: 1vw;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  font-size: 1.5vw;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 400;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #999;
+  margin: 0 0.0rem;
+}
+
+.nav-bar a:hover {
+  color: #C3A06F;
+}
+
+.homepage-content{
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: Noto Sans TC, sans-serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.angled-marquee {
+  background-color: #C3A06F;
+  transform: rotate(-5deg);
+  width: 60%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 2rem;
+  cursor: grab;
+  user-select: none;
+}
+
+.angled-marquee-track {
+  display: flex;
+  will-change: transform;
+  font-family: Noto Sans TC, sans-serif;
+}
+.angled-marquee-track a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.angled-marquee-track a:hover {
+  color: #906B3E;
+}
+
+.angled-marquee-item {
+  flex-shrink: 0;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  white-space: nowrap;
+}
+
+ .angled-box {
+  border: 1px solid #C3A06F;
+  transform: rotate(2deg);
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  font-size: 1rem;
+  font-family: Noto Sans TC, sans-serif;
+  color: #222;
+  line-height: 1.8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+  
+.smooth-marquee {
+  width: auto;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0px;
+  background-color: transparent;
+  border: 0px solid rgba(0,0,0,0.0); 
+  display: flex;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(4px); 
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-linear 60s linear infinite;
+  animation-play-state: running; /* 預設為啟動狀態 */
+}
+
+.marquee-track span {
+  display: inline-block;
+  padding-right: 2rem; /* 控制字距，不會太緊 */
+  font-size: 11.5vw;
+  white-space: nowrap;
+  font-family: Noto Sans TC, sans-serif;
+  color: #C4A16F;
+  line-height: 1.4;
+  font-weight: 900;
+}
+.smooth-marquee,
+.marquee-track,
+.marquee-track span {
+  user-select: none;
+}
+
+/* 動畫讓文字滾動 */
+@keyframes scroll-linear {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.caisancho-footer {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #555;
+}
+
+.footer-flag {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #999;
+  margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #C3A06F;
+}
+
+.index-content-innerbox { scrollbar-width: none; } /* Firefox */
+.index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
+.index-content-innerbox::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
+
+
+body {
+  background-image:url(" https://github.com/caisancho/caisancho.github.io/blob/main/caisancho_flag_waving.webm");
+background-color: rgba(255,255,255,0.7);
+    background-blend-mode: lighten;
+  background-size: auto;
+}
+
+.index-page{
+background-image: ;}
+
+</style>
+<html>
+<head>
+</head>
+<body>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+  </div>
+</div>
+
+  <div class="angled-marquee" id="marquee">
+  <div class="angled-marquee-track" id="track">
+    <!-- 重複內容 3~4 次 -->
+    <div class="angled-marquee-item"><a href="about.html">ABOUT 關於</a></div>
+    <div class="angled-marquee-item"><a href="law.html">LAW 法規</a></div>
+    <div class="angled-marquee-item"><a href="others.html">HOME 首頁</div>
+    <div class="angled-marquee-item"><a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a></div>
+    <div class="angled-marquee-item"><a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a></div>
+    <div class="angled-marquee-item"><a href="https://www.threads.com/@caisancho">THREADS 串串</a></div>
+  </div>
+</div>
+
+<div class="angled-box">
+  <p>
+施工中請注意安全
+  </p>
+</div>
+
+<script>
+  const track = document.getElementById("track");
+  let isDown = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let velocity = 0;
+  let animationFrame;
+
+  function animate() {
+    currentTranslate += velocity;
+    velocity *= 0.95; // 慣性衰減
+
+    // 無限滾動檢查
+    const trackWidth = track.scrollWidth / 2;
+    if (currentTranslate < -trackWidth) currentTranslate += trackWidth;
+    if (currentTranslate > 0) currentTranslate -= trackWidth;
+
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  document.getElementById("marquee").addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    cancelAnimationFrame(animationFrame);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+    animationFrame = requestAnimationFrame(animate);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    velocity = dx;
+    currentTranslate += dx;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    startX = e.pageX;
+  });
+
+// 初始化
+track.innerHTML += track.innerHTML; // 複製內容做無限滾動
+animationFrame = requestAnimationFrame(animate);
+</script>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜</span>
+  </div>
+</div>
+
+<footer class="caisancho-footer">
+  <img src="images/footerflag.png" class="footer-flag">
+  <p class="copyright">Copyright © 2025 Gôa-Sòaⁿ-Téng-Chiu kióng-hô-kok</p>
+  <div class="footer-links">
+    <a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a> |
+    <a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a> |
+    <a href="https://www.threads.com/@caisancho">THREADS 串串</a>
+  </div>
+</footer>
+  
+</body>
+</html>
