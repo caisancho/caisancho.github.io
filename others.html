@@ -160,6 +160,16 @@
 .footer-links a:hover {
   color: #C3A06F;
 }
+  
+.locked-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
+  margin: 2rem auto;
+  pointer-events: none; /* 🚫 禁用點擊事件，無法暫停/拖曳/右鍵儲存 */
+  user-select: none;
+}
 
 .index-content-innerbox { scrollbar-width: none; } /* Firefox */
 .index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
@@ -203,8 +213,9 @@ background-image: ;}
 <div class="angled-box">
   <p>
 施工中請注意安全
-    <video controls>
+    <video autoplay muted loop playsinline preload="auto" class="locked-video">
   <source src="flagwaving.webm" type="video/webm">
+  您的瀏覽器不支援 WebM 格式。
 </video>
   </p>
 </div>
