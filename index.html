@@ -161,6 +161,10 @@
   color: #C3A06F;
 }
 
+.weatherwidget-io {
+  pointer-events: none;
+}
+
 .index-content-innerbox { scrollbar-width: none; } /* Firefox */
 .index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
 .index-content-innerbox::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
@@ -204,32 +208,9 @@ background-image: ;}
 <div class="angled-box">
   <p>
   
-<div id="weather-info"><font color="#C3A06F"> 【外傘頂洲即時天氣載入中...】</font></div>
-
+<a class="weatherwidget-io" href="https://forecast7.com/zh-tw/23d62120d16/kouhu/" data-label_1="外傘頂洲即時天氣" data-label_2="未來五日預報" data-font="微軟正黑體 (Microsoft JhengHei)" data-days="5" data-theme="pure" data-accent="rgba(0, 0, 0, 0)" data-textcolor="#C4A16F" data-highcolor="#8C3B3B" data-lowcolor="#333F50" data-suncolor="#C4A16F" data-raincolor="#333F50" >外傘頂洲即時天氣 未來五日預報</a>
 <script>
-const apiKey = "CWA-02FD6D0E-245F-4071-AC6C-0AAEACFB36E3"; 
-const stationId = "海口故事園區"; 
-
-fetch(`https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=${apiKey}&stationId=${stationId}`)
-  .then(response => response.json())
-  .then(data => {
-    const location = data.records.location[0];
-    const elements = location.weatherElement.reduce((acc, el) => {
-      acc[el.elementName] = el.elementValue;
-      return acc;
-    }, {});
-
-    const temperature = elements.TEMP;
-    const humidity = (parseFloat(elements.HUMD) * 100).toFixed(0);
-    const windSpeed = elements.WDSD;
-
-    document.getElementById("weather-info").textContent =
-      `外傘頂洲即時觀測：氣溫 ${temperature}°C，濕度 ${humidity}% ，風速 ${windSpeed} m/s`;
-  })
-  .catch(() => {
-    document.getElementById("weather-info").textContent =
-     <font color="#8C3B3B"> "【⚠ 暫時無法載入即時天氣資料，請確認外傘頂洲是否處於海平面下 ⚠】";</font>
-  });
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
   
   <br>
