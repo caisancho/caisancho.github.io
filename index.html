@@ -202,20 +202,32 @@ background-image: ;}
 
 <div class="angled-box">
   <p>
-    <div id="weather-block"></div>
+  
+<div id="weather-info"><font color="#C3A06F"> 【外傘頂洲即時天氣載入中...】</font></div>
 
 <script>
-const apiKey = "CWA-02FD6D0E-245F-4071-AC6C-0AAEACFB36E3";
-const location = "口湖鄉";  // 可改成你想要的鄉鎮
+const apiKey = "CWA-02FD6D0E-245F-4071-AC6C-0AAEACFB36E3"; 
+const stationId = "CAJ05"; 
 
-fetch(`https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${apiKey}&locationName=${location}`)
-  .then(res => res.json())
+fetch(`https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0003-001?Authorization=${apiKey}&stationId=${stationId}`)
+  .then(response => response.json())
   .then(data => {
-    const locationData = data.records.locations[0].location[0];
-    const timeSlot = locationData.weatherElement.find(e => e.elementName === "WeatherDescription").time[0];
-    const description = timeSlot.elementValue[0].value;
-    document.getElementById("weather-block").textContent = `外傘頂洲 今日天氣：${description}`;
-    
+    const location = data.records.location[0];
+    const elements = location.weatherElement.reduce((acc, el) => {
+      acc[el.elementName] = el.elementValue;
+      return acc;
+    }, {});
+
+    const temperature = elements.TEMP;
+    const humidity = (parseFloat(elements.HUMD) * 100).toFixed(0);
+    const windSpeed = elements.WDSD;
+
+    document.getElementById("weather-info").textContent =
+      `外傘頂洲即時觀測：氣溫 ${temperature}°C，濕度 ${humidity}% ，風速 ${windSpeed} m/s`;
+  })
+  .catch(() => {
+    document.getElementById("weather-info").textContent =
+     <font color="#8C3B3B"> "【⚠ 暫時無法載入即時天氣資料，請確認外傘頂洲是否處於海平面下 ⚠】";</font>
   });
 </script>
   
