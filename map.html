@@ -63,7 +63,7 @@ legend.addTo(map);
     iconSize: [24, 24],
     iconAnchor: [12, 12]
   })
-}).addTo(map).bindPopup("<b>塭港堆燈塔(外傘頂洲燈塔)</b><br>外傘頂洲國內海拔最高點(目前由中華民國佔領中)");
+}).addTo(map).bindPopup("<b>塭港堆燈塔(外傘頂洲燈塔)</b><br>外傘頂洲國內海拔最高點<br>(目前由中華民國流亡政府軍事佔領中)");
   
   var geojsonFeature = {
   "type": "Feature",
@@ -168,7 +168,7 @@ L.geoJSON(geojsonFeature, {
       fillOpacity: feature.properties["fill-opacity"]
     };
   }
-}).addTo(map).bindPopup("<b>外傘頂洲共和國</b><br>外傘頂洲目前海平面以上地區");
+}).addTo(map).bindPopup("<b>共和國疆域</b><br>外傘頂洲目前海平面以上地區");
 
 var borderLine = L.polyline([
   [23.570604714748967,120.12949406364623],
