@@ -9,6 +9,24 @@
   <style>
     html, body { margin: 0; padding: 0; }
     #map { height: 100vh; }
+    .info.legend {
+  background: white;
+  padding: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.info.legend i {
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.8;
+  display: inline-block;
+}
   </style>
 </head>
 <body>
@@ -25,15 +43,37 @@
     maxZoom: 19
   }).addTo(map);
 
+  var legend = L.control({ position: 'bottomright' });
+
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend');
+  div.innerHTML += "<h4>圖例｜Legend</h4>";
+  div.innerHTML += '<i style="background: #C3A06F"></i> 外傘頂洲沙洲本體<br>';
+  div.innerHTML += '<i style="background: #000000"></i> 海上管轄線<br>';
+  div.innerHTML += '⛯︎ 燈塔<br>';
+  div.innerHTML += '┄ 領海基線<br>';
+  return div;
+};
+
+legend.addTo(map);
+  var capital = L.marker([23.44583633523895,120.04082602813224],{
+  icon: L.divIcon({
+    className: 'text-icon',
+    html: '⛯︎',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12]
+  })
+}).addTo(map).bindPopup("<b>塭港堆燈塔(外傘頂洲燈塔)</b><br>外傘頂洲國內海拔最高點(目前由中華民國佔領中)");
+  
   var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-      "stroke": "#C4A16F",
-      "stroke-width": 2,
-      "stroke-opacity": 1,
-      "fill": "#8B765C",
-      "fill-opacity": 0.5
-    },
+  "type": "Feature",
+  "properties": {
+  "stroke": "#C3A06F",
+  "stroke-width": 2,
+  "stroke-opacity": 1,
+  "fill": "#C3A06F",
+  "fill-opacity": 0.4
+},
     "geometry": {
       "type": "Polygon",
       "coordinates": [[
@@ -118,7 +158,31 @@
     }
   };
 
-  L.geoJSON(geojsonFeature).addTo(map);
+L.geoJSON(geojsonFeature, {
+  style: function(feature) {
+    return {
+      color: feature.properties.stroke,       // 線條顏色
+      weight: feature.properties["stroke-width"],
+      opacity: feature.properties["stroke-opacity"],
+      fillColor: feature.properties.fill,
+      fillOpacity: feature.properties["fill-opacity"]
+    };
+  }
+}).addTo(map).bindPopup("<b>外傘頂洲共和國</b><br>外傘頂洲目前海平面以上地區");
+
+var borderLine = L.polyline([
+  [23.570604714748967,120.12949406364623],
+  [23.536433689486884,120.12982105178276],
+  [23.467465129750224,120.07423306862256],
+  [23.42426645276099 ,120.07423306862256],
+  [23.42456649226783 ,120.02453087191498]      
+], {
+  color: "#595959",
+  weight: 2,
+  dashArray: '5, 5'
+}).addTo(map);
+borderLine.bindPopup("外傘頂洲領海基線");
+
 </script>
 
 </body>
