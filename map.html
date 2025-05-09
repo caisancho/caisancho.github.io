@@ -49,9 +49,8 @@ legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend');
   div.innerHTML += "<h4>圖例｜Legend</h4>";
   div.innerHTML += '<i style="background: #C3A06F"></i> 外傘頂洲沙洲本體<br>';
-  div.innerHTML += '<i style="background: #000000"></i> 海上管轄線<br>';
   div.innerHTML += '⛯︎ 燈塔<br>';
-  div.innerHTML += '┄ 領海基線<br>';
+  div.innerHTML += '┄ 領海中線<br>';
   return div;
 };
 
@@ -181,7 +180,7 @@ var borderLine = L.polyline([
   weight: 2,
   dashArray: '5, 5'
 }).addTo(map);
-borderLine.bindPopup("外傘頂洲領海基線");
+borderLine.bindPopup("外傘頂洲領海中線");
 
 </script>
 
