@@ -201,6 +201,59 @@ button {
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
+.simple-news-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  color: #767171;
+  border: 1px solid #906B3E;
+  border-radius: 1rem;
+  padding: 0.6rem 0.6rem;
+  max-width: 100%;
+  margin: 0rem auto;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.news-label {
+  font-weight: bold;
+  flex-shrink: 0;
+  color: #906B3E;
+}
+
+.simple-news-text {
+  flex: 1;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  overflow-x: auto;
+  text-overflow: unset;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  user-select: none; /* 不可選取文字 */
+  cursor: grab;
+}
+
+.simple-news-text.fade-out {
+  opacity: 0;
+}
+.simple-news-text::-webkit-scrollbar {
+  display: none; /* Chrome / Safari 隱藏 */
+}
+.simple-news-text.dragging {
+  cursor: grabbing;
+}
+
+.news-btn {
+  background: none;
+  border: none;
+  color: #906B3E;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
 .index-page{
 background-image: ;}
 
@@ -236,10 +289,50 @@ background-image: ;}
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+  <div class="simple-news-bar">
+  <span class="news-label"> 即時消息 </span>
+  <div class="simple-news-text fade" id="simple-news-text">
+    政治／共和國參議會無異議通過「中華民國還未死透決議文」。
+  </div>
+  <button class="news-btn" onclick="prevNews()">‹</button>
+  <button class="news-btn" onclick="nextNews()">›</button>
+</div>
+
+  <script>
+const newsList = [
+  " 國際／外交部發言人指美總統川普之「重大消息」與外傘頂洲無關。",
+  " 兩岸／我駐臺辦事處宣告不紀念10/25，正式稱作「臺灣再殖民日」。",
+  " 國內／中央政府籲國人向國際社會表達重視外傘頂洲沙源問題之訴求。",
+  " 文化／外交部或將組織「2025年度新一代設計展」參訪團。",
+  " 外交／中央政府正式將「宇宙是一片披撒」原則納入政策參考。"
+];
+
+let currentIndex = 0;
+const textElem = document.getElementById("simple-news-text");
+
+function updateNews(newIndex) {
+  textElem.classList.add("fade-out");
+  setTimeout(() => {
+    currentIndex = newIndex;
+    textElem.textContent = newsList[currentIndex];
+    textElem.classList.remove("fade-out");
+  }, 400); // 對應 CSS transition 時間
+}
+
+function nextNews() {
+  const newIndex = (currentIndex + 1) % newsList.length;
+  updateNews(newIndex);
+}
+
+function prevNews() {
+  const newIndex = (currentIndex - 1 + newsList.length) % newsList.length;
+  updateNews(newIndex);
+}
+</script>
   
   <br>
     歡迎光臨外傘頂洲共和國！你可以不太正式地視這裡為一個與西蘭公國、玫瑰島共和國一樣的微國家（Micronation），或某幾塊黑水溝上的沙洲，自獨立後至今這裡皆處於流亡狀態；請特別留意，本站雖依照上述微國家精神設立，但非正式法人組織，請勿將外傘頂洲政府與其他歪七扭八的「政府」相互類比。<br><br>
-    這裡沒有甚麼自古以來，聯合國2758號決議不關我們的事，外傘頂洲從來不是中國的一部分。
+    <font color="#767171">「這裡沒有甚麼自古以來，聯合國2758號決議不關我們的事，外傘頂洲從來不是中國的一部分。」</font><br><br>
   <section class="map-box">
 <font color="#C4A16F"><b>▶ 外傘頂洲疆域地圖 ◀</b></font><br>
   <div class="map-frame-container">
@@ -276,7 +369,6 @@ background-image: ;}
   }
 </script>
 
-    
   </p>
 </div>
 
