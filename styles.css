@@ -33,14 +33,14 @@
   font-family: Noto Sans TC, sans-serif;
   font-weight: 300;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
 }
 
 .angled-marquee {
-  background-color: #C3A06F;
-  transform: rotate(-5deg);
-  width: 60%;
-  margin: 2rem auto;
+  background-color: #00000000;
+  transform: rotate(0deg);
+  width: 100%;
+  margin: 1rem auto;
   overflow: hidden;
   position: relative;
   height: 2rem;
@@ -56,7 +56,7 @@
   
 .angled-marquee-track a {
   text-decoration: none;
-  color: #ffffff;
+  color: #767171;
   margin: 0 0.5rem;
 }
 
@@ -74,17 +74,17 @@
 }
 
  .angled-box {
-  border: 1px solid #C3A06F;
-  transform: rotate(2deg);
-  width: 60%;
+  border: 0px solid #C3A06F;
+  transform: rotate(0deg);
+  width: 70%;
   margin: 2rem auto;
   padding: 1rem;
-  background: #fff;
+  background: #00000000;
   font-size: 1rem;
   font-family: Noto Sans TC, sans-serif;
   color: #222;
   line-height: 1.8;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0 0px rgba(0,0,0,0.05);
 }
   
 .smooth-marquee {
@@ -129,6 +129,14 @@
 @keyframes scroll-linear {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+.main-text {
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
   
 .caisancho-footer {
@@ -261,5 +269,4 @@ button {
 }
 
 .index-page{
-background-image: ;
-}
+background-image: ;}
