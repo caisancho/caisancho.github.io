@@ -1,7 +1,9 @@
-<!DOCTYPE html>
 <style>
-/* Index Titles */
-
+::selection {
+  background: #C3A06F;
+  color: #ffffff;
+}
+  
 .nav-bar{
   margin-top: 1vw;
   grid-template-columns: 1fr 1fr;
@@ -32,14 +34,14 @@
   font-family: Noto Sans TC, sans-serif;
   font-weight: 300;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
 }
 
 .angled-marquee {
-  background-color: #C3A06F;
-  transform: rotate(-5deg);
-  width: 60%;
-  margin: 2rem auto;
+  background-color: #00000000;
+  transform: rotate(0deg);
+  width: 100%;
+  margin: 1rem auto;
   overflow: hidden;
   position: relative;
   height: 2rem;
@@ -52,9 +54,10 @@
   will-change: transform;
   font-family: Noto Sans TC, sans-serif;
 }
+  
 .angled-marquee-track a {
   text-decoration: none;
-  color: #ffffff;
+  color: #767171;
   margin: 0 0.5rem;
 }
 
@@ -72,18 +75,18 @@
 }
 
  .angled-box {
-  border: 1px solid #C3A06F;
-  transform: rotate(2deg);
-  width: 60%;
+  border: 0px solid #C3A06F;
+  transform: rotate(0deg);
+  width: 70%;
   margin: 2rem auto;
   padding: 1rem;
-  background: #fff;
+  background: #00000000;
   font-size: 1rem;
   font-family: Noto Sans TC, sans-serif;
   color: #222;
   line-height: 1.8;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    }
+  box-shadow: 0 0 0px rgba(0,0,0,0.05);
+}
   
 .smooth-marquee {
   width: auto;
@@ -103,12 +106,12 @@
   display: flex;
   white-space: nowrap;
   animation: scroll-linear 60s linear infinite;
-  animation-play-state: running; /* 預設為啟動狀態 */
+  animation-play-state: running; 
 }
 
 .marquee-track span {
   display: inline-block;
-  padding-right: 2rem; /* 控制字距，不會太緊 */
+  padding-right: 2rem;
   font-size: 11.5vw;
   white-space: nowrap;
   font-family: Noto Sans TC, sans-serif;
@@ -116,17 +119,27 @@
   line-height: 1.4;
   font-weight: 900;
 }
+  
 .smooth-marquee,
 .marquee-track,
 .marquee-track span {
   user-select: none;
 }
 
-/* 動畫讓文字滾動 */
+
 @keyframes scroll-linear {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+.main-text {
+  max-width: 95%;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+  
 .caisancho-footer {
   background-color: #f3f3f3;
   text-align: center;
@@ -165,21 +178,23 @@
   pointer-events: none;
 }
 
-.index-content-innerbox { scrollbar-width: none; } /* Firefox */
-.index-content-innerbox { -ms-overflow-style: none; } /* IE and Edge */
+.index-content-innerbox { scrollbar-width: none; }
+.index-content-innerbox { -ms-overflow-style: none; }
 .index-content-innerbox::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
   
 body {
   background-image:url(" https://github.com/caisancho/caisancho.github.io/blob/main/caisancho_flag_waving.webm");
-background-color: rgba(255,255,255,0.7);
-    background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.7);
+  background-blend-mode: lighten;
   background-size: auto;
 }
+  
 input {
   padding: 0.5rem;
   margin: 0.5rem 0;
   width: 40%;
 }
+  
 button {
   background-color: #C3A06F;
   border: none;
@@ -231,7 +246,7 @@ button {
   text-overflow: unset;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; 
-  user-select: none; /* 不可選取文字 */
+  user-select: none; 
   cursor: grab;
 }
 
@@ -239,7 +254,7 @@ button {
   opacity: 0;
 }
 .simple-news-text::-webkit-scrollbar {
-  display: none; /* Chrome / Safari 隱藏 */
+  display: none; 
 }
 .simple-news-text.dragging {
   cursor: grabbing;
@@ -258,6 +273,7 @@ button {
 background-image: ;}
 
 </style>
+
 <html>
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -269,10 +285,8 @@ background-image: ;}
     <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
   </div>
 </div>
-
   <div class="angled-marquee" id="marquee">
   <div class="angled-marquee-track" id="track">
-    <!-- 重複內容 3~4 次 -->
     <div class="angled-marquee-item"><a href="about.html">ABOUT 關於</a></div>
     <div class="angled-marquee-item"><a href="law.html">LAW 法規</a></div>
     <div class="angled-marquee-item"><a href="others.html">OTHERS 其他</a></div>
@@ -283,7 +297,7 @@ background-image: ;}
 </div>
 
 <div class="angled-box">
-  <p>
+<p>
   
 <a class="weatherwidget-io" href="https://forecast7.com/zh-tw/23d62120d16/kouhu/" data-label_1="外傘頂洲即時天氣" data-label_2="未來五日預報" data-font="微軟正黑體 (Microsoft JhengHei)" data-days="5" data-theme="pure" data-basecolor="rgba(0, 0, 0, 0) data-accent="rgba(0, 0, 0, 0)" data-textcolor="#C4A16F" data-highcolor="#8C3B3B" data-lowcolor="#333F50" data-suncolor="#C4A16F" data-raincolor="#333F50" >外傘頂洲即時天氣 未來五日預報</a>
 <script>
@@ -298,7 +312,7 @@ background-image: ;}
   <button class="news-btn" onclick="nextNews()">›</button>
 </div>
 
-  <script>
+<script>
 const newsList = [
   " 國際／外交部發言人指美總統川普之「重大消息」與外傘頂洲無關。",
   " 兩岸／我駐臺辦事處宣告不紀念10/25，正式稱作「臺灣再殖民日」。",
@@ -306,24 +320,20 @@ const newsList = [
   " 文化／外交部或將組織「2025年度新一代設計展」參訪團。",
   " 外交／中央政府正式將「宇宙是一片披撒」原則納入政策參考。"
 ];
-
 let currentIndex = 0;
 const textElem = document.getElementById("simple-news-text");
-
 function updateNews(newIndex) {
   textElem.classList.add("fade-out");
   setTimeout(() => {
     currentIndex = newIndex;
     textElem.textContent = newsList[currentIndex];
     textElem.classList.remove("fade-out");
-  }, 400); // 對應 CSS transition 時間
+  }, 400);
 }
-
 function nextNews() {
   const newIndex = (currentIndex + 1) % newsList.length;
   updateNews(newIndex);
 }
-
 function prevNews() {
   const newIndex = (currentIndex - 1 + newsList.length) % newsList.length;
   updateNews(newIndex);
@@ -331,14 +341,17 @@ function prevNews() {
 </script>
   
   <br>
-    歡迎光臨外傘頂洲共和國！你可以不太正式地視這裡為一個與西蘭公國、玫瑰島共和國一樣的微國家（Micronation），或某幾塊黑水溝上的沙洲，自獨立後至今這裡皆處於流亡狀態；請特別留意，本站雖依照上述微國家精神設立，但非正式法人組織，請勿將外傘頂洲政府與其他歪七扭八的「政府」相互類比。<br><br>
-    <font color="#767171">「這裡沒有甚麼自古以來，聯合國2758號決議不關我們的事，外傘頂洲從來不是中國的一部分。」</font><br><br>
+<section class="main-text">
+ 歡迎光臨外傘頂洲共和國！你可以不太正式地視這裡為一個與西蘭公國、玫瑰島共和國一樣的微國家（Micronation），或某幾塊黑水溝上的沙洲，自獨立後至今這裡皆處於流亡狀態；請特別留意，本站雖依照上述微國家精神設立，但非正式法人組織，請勿將外傘頂洲政府與其他歪七扭八的「政府」相互類比。<br><br>
+<font color="#767171">「這裡沒有甚麼自古以來，聯合國2758號決議不關我們的事，外傘頂洲從來不是中國的一部分。」</font><br><br>
+</section>
+  
   <section class="map-box">
 <font color="#C4A16F"><b>▶ 外傘頂洲疆域地圖 ◀</b></font><br>
   <div class="map-frame-container">
     <iframe
       src="https://caisancho.github.io/map.html?v=2"
-      width="100%" height="500" style="border:none; border-radius:8px;"></iframe>
+      width="100%" height="400" style="border:none; border-radius:8px;"></iframe>
   </div>
 <section class="click-tracker">    
  <p><button onclick="fakeClick()">支持外傘頂洲獨立</button>  你已貢獻  <span id="click-count">0</span> 顆沙粒的外傘頂洲主權。</p>
@@ -351,17 +364,13 @@ function prevNews() {
 <script>
   let count = localStorage.getItem("flagSaluteCount") || 0;
   document.getElementById("click-count").innerText = count;
-
-  // 檢查是否達成成就
   if (count >= 50) {
     document.getElementById("medal").style.display = "block";
   }
-
   function fakeClick() {
     count++;
     localStorage.setItem("flagSaluteCount", count);
     document.getElementById("click-count").innerText = count;
-
     if (count === 50) {
       alert("✹！恭喜你獲得洲民榮譽獎章！✹");
       document.getElementById("medal").style.display = "block";
@@ -379,31 +388,24 @@ function prevNews() {
   let currentTranslate = 0;
   let velocity = 0;
   let animationFrame;
-
   function animate() {
     currentTranslate += velocity;
-    velocity *= 0.95; // 慣性衰減
-
-    // 無限滾動檢查
+    velocity *= 0.95;
     const trackWidth = track.scrollWidth / 2;
     if (currentTranslate < -trackWidth) currentTranslate += trackWidth;
     if (currentTranslate > 0) currentTranslate -= trackWidth;
-
     track.style.transform = `translateX(${currentTranslate}px)`;
     animationFrame = requestAnimationFrame(animate);
   }
-
   document.getElementById("marquee").addEventListener("mousedown", (e) => {
     isDown = true;
     startX = e.pageX;
     cancelAnimationFrame(animationFrame);
   });
-
   window.addEventListener("mouseup", () => {
     isDown = false;
     animationFrame = requestAnimationFrame(animate);
   });
-
   window.addEventListener("mousemove", (e) => {
     if (!isDown) return;
     const dx = e.pageX - startX;
@@ -412,9 +414,7 @@ function prevNews() {
     track.style.transform = `translateX(${currentTranslate}px)`;
     startX = e.pageX;
   });
-
-// 初始化
-track.innerHTML += track.innerHTML; // 複製內容做無限滾動
+track.innerHTML += track.innerHTML;
 animationFrame = requestAnimationFrame(animate);
 </script>
 
