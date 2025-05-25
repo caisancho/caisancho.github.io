@@ -36,42 +36,7 @@
   grid-template-columns: 2fr 2fr;
 }
 
-.angled-marquee {
-  background-color: #00000000;
-  transform: rotate(0deg);
-  width: 100%;
-  margin: 1rem auto;
-  overflow: hidden;
-  position: relative;
-  height: 2rem;
-  cursor: grab;
-  user-select: none;
-}
 
-.angled-marquee-track {
-  display: flex;
-  will-change: transform;
-  font-family: Noto Sans TC, sans-serif;
-}
-  
-.angled-marquee-track a {
-  text-decoration: none;
-  color: #767171;
-  margin: 0 0.5rem;
-}
-
-.angled-marquee-track a:hover {
-  color: #906B3E;
-}
-
-.angled-marquee-item {
-  flex-shrink: 0;
-  padding: 0 2rem;
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: white;
-  white-space: nowrap;
-}
 
  .angled-box {
   border: 0px solid #C3A06F;
@@ -270,3 +235,28 @@ button {
 
 .index-page{
 background-image: ;}
+
+.nav-btn {
+  display: block;
+  text-align: center;
+  background: #FAFAFA;
+  color: #767171;
+  padding: 0.1rem 0.1rem;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #767171;
+  color: white;
+}
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0rem;
+  max-width: 100%;
+  margin: 1rem auto;
+}
