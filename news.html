@@ -1,0 +1,95 @@
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜</span>
+  </div>
+</div>
+
+<div class="angled-box">
+  <p>
+<nav class="page-nav">
+  <a href="index.html" class="nav-btn">HOME 首頁</a>
+  <a href="about.html" class="nav-btn">ABOUT 關於</a>
+  <a href="law.html" class="nav-btn">LAW 法規</a>
+  <a href="news.html" class="nav-btn active">NEWS 最新消息</a>
+  <a href="others.html" class="nav-btn">OTHERS 其他</a>
+  <a href="https://micronations.wiki/wiki/Republic_of_Caisancho" class="nav-btn">MICROWIKI 微基</a>
+</nav>
+施工中請注意安全
+    <video autoplay muted loop playsinline preload="auto" class="locked-video">
+  <source src="images/flagwaving.webm" type="video/webm">
+  您的瀏覽器不支援 WebM 格式。
+</video>
+  </p>
+</div>
+
+<script>
+  const track = document.getElementById("track");
+  let isDown = false;
+  let startX = 0;
+  let currentTranslate = 0;
+  let velocity = 0;
+  let animationFrame;
+
+  function animate() {
+    currentTranslate += velocity;
+    velocity *= 0.95; // 慣性衰減
+
+    // 無限滾動檢查
+    const trackWidth = track.scrollWidth / 2;
+    if (currentTranslate < -trackWidth) currentTranslate += trackWidth;
+    if (currentTranslate > 0) currentTranslate -= trackWidth;
+
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  document.getElementById("marquee").addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    cancelAnimationFrame(animationFrame);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+    animationFrame = requestAnimationFrame(animate);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    velocity = dx;
+    currentTranslate += dx;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    startX = e.pageX;
+  });
+
+// 初始化
+track.innerHTML += track.innerHTML; // 複製內容做無限滾動
+animationFrame = requestAnimationFrame(animate);
+</script>
+
+<div class="smooth-marquee">
+  <div class="marquee-track">
+    <span>ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜ガイサンチョ共和国｜Respubliko de Caisanĉo , la Ekstera Ombrela Sabloareo｜外傘頂洲共和國｜Gōa-Sòaⁿ-Téng-Chiu kiōng-hô-kok｜</span>
+  </div>
+</div>
+
+<footer class="caisancho-footer">
+  <img src="images/footerflag.png" class="footer-flag">
+  <p class="copyright">Copyright © 2025 Gôa-Sòaⁿ-Téng-Chiu kióng-hô-kok</p>
+  <div class="footer-links">
+    <a href="https://micronations.wiki/wiki/Republic_of_Caisancho">MICROWIKI 微基</a> |
+    <a href="https://www.facebook.com/Caisancho.gov">FACEBOOK 面冊</a> |
+    <a href="https://www.threads.com/@caisancho">THREADS 串串</a>
+  </div>
+</footer>
+  
+</body>
+</html>
