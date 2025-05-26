@@ -260,3 +260,28 @@ background-image: ;}
   max-width: 100%;
   margin: 1rem auto;
 }
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* 讓圖片在窄螢幕自動換行 */
+  gap: 1.5em; /* 圖片間距 */
+  justify-content: center;
+}
+
+.image-gallery figure {
+  width: 22%; /* 每列約可容納4張圖 */
+  margin: 0;
+  text-align: center;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-gallery figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
